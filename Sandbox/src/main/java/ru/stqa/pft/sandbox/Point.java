@@ -1,12 +1,16 @@
 package ru.stqa.pft.sandbox;
 
+import java.security.PublicKey;
+
 public class Point {
+  public double a;
+  public double b;
 
-
-  public static double distance(Point p1, Point p2);
-            return p2 - p1;
-
-  {
-    System.out.println("Расстояние составляет" + (Point p2 - Point p1));
+  public Point (double a, double b) {
+    this.a = a;
+    this.b = b;
+  }
+  public double distance() {
+    return this.b - this.a;
   }
 }
