@@ -1,8 +1,12 @@
 package ru.stqa.pft.addressbook;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.firefox.GeckoDriverInfo;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.NoAlertPresentException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,10 +17,20 @@ public class GroupCreationTest {
   FirefoxDriver wd;
 
   @BeforeMethod
+
   public void setUp() throws Exception {
-    wd = new FirefoxDriver();
+    /*System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
+    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+    capabilities.setCapability("marionette", true);
+    // Initialize WebDriver
+    //WebDriver wd = new FirefoxDriver(capabilities);
+    wd = new FirefoxDriver(capabilities);*/
+    WebDriver wd = new FirefoxDriver();
+    String property = System.getProperty("driver.path");
+    System.setProperty("webdriver.gecko.driver", property);
+    WebDriver.Options manage = wd.manage();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    wd.get ("http://127.0.0.1:8080/addressbook/group.php");
+    wd.get ("http://localhost:8080/addressbook/group.php");
     login("admin", "secret");
   }
 
