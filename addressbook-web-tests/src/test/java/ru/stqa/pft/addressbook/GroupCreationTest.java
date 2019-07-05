@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
 import org.openqa.selenium.firefox.GeckoDriverInfo;
@@ -17,18 +18,11 @@ public class GroupCreationTest {
   FirefoxDriver wd;
 
   @BeforeMethod
-
   public void setUp() throws Exception {
-    /*System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
+    System.setProperty("webdriver.gecko.driver", "C:\\geckodriver\\geckodriver.exe");
     DesiredCapabilities capabilities = DesiredCapabilities.firefox();
     capabilities.setCapability("marionette", true);
-    // Initialize WebDriver
-    //WebDriver wd = new FirefoxDriver(capabilities);
-    wd = new FirefoxDriver(capabilities);*/
-    WebDriver wd = new FirefoxDriver();
-    String property = System.getProperty("driver.path");
-    System.setProperty("webdriver.gecko.driver", property);
-    WebDriver.Options manage = wd.manage();
+    WebDriver wd = new FirefoxDriver(capabilities);
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     wd.get ("http://localhost:8080/addressbook/group.php");
     login("admin", "secret");
@@ -95,4 +89,3 @@ public class GroupCreationTest {
       }
       }
     }
-

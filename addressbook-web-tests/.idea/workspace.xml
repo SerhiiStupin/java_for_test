@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ccf3bb1-ce07-4eec-9a53-31f7ed1b0922" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../HW/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../HW/src/test/java/homeWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW/src/test/java/homeWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HW/src/test/java/homeWork.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -86,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -271,8 +269,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
